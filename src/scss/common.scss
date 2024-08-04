@@ -1,0 +1,14 @@
+// Заголовки, загальні БЕМ блоки та інше...
+body::-webkit-scrollbar-track {
+	background-color: #000;
+	border-radius: 50px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background-color: #00e4ff;
+	border-radius: 50px;
+}
+
+body::-webkit-scrollbar {
+	width: 4px;
+}
