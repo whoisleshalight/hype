@@ -36,7 +36,10 @@
 					}
 					/* Блок з лічильником */
 					.fls-preloader__counter{
-						font-size: 10rem;
+						font-size:  40px;
+						color: black;font-family: "Bebas Neue";
+}
+						font-weight: 600;
 					}
 					/* Прогресбар */
 					.fls-preloader__line{}
@@ -57,7 +60,7 @@
 						visibility: hidden;
 					}
 					.loaded body>*:not(.fls-preloader){
-						transition: opacity 0.5s ease 0s;
+						transition: opacity 0.8s ease 0s;
 						opacity: 1;
 						visibility: visible;
 					}
@@ -69,7 +72,6 @@
 					<div class="fls-preloader">
 						<div class="fls-preloader__body">
 							<div class="fls-preloader__counter">0%</div>
-							<div class="fls-preloader__line"><span></span></div>
 						</div>
 					</div>`;
 				document.body.insertAdjacentHTML("beforeend",preloaderTemplate);
@@ -77,7 +79,6 @@
 				const
 					preloader = document.querySelector('.fls-preloader'),
 					showPecentLoad = document.querySelector('.fls-preloader__counter'),
-					showLineLoad = document.querySelector('.fls-preloader__line span'),
 					htmlDocument = document.documentElement;
 
 				let imagesLoadedCount = counter = progress = 0;
@@ -95,7 +96,6 @@
 				});
 				function setValueProgress(progress) {
 					showPecentLoad ? showPecentLoad.innerText = `${progress}%`: null;
-					showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
 				}
 				showPecentLoad ? setValueProgress(progress) : null;
 
